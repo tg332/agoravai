@@ -1,0 +1,37 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>facil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="painel">
+      <h1>Bora sair?</h1>
+      <img src="https://gifman.net/wp-content/uploads/2019/06/ursinho-fofo-apaixonado.gif" alt="">
+      <h2>.</h2>
+   <a href="https://www.youtube.com/watch?v=51lOFuCR7dE">   <button id="sim"> sim! </button></a>
+      <button onmouseover="fuja()" id="nao">nao</button>
+     
+  </div>
+  <script>
+      function fuja(){
+          var botaoNao = document.getElementById("nao")
+
+          var larguraJanela = window.innerWidth;
+          var alturaJanela =  window.innerHeight
+
+
+          var maxX = larguraJanela - botaoNao.offsetWidth;
+          var maxY = alturaJanela - botaoNao.offsetHeight;
+
+          var aleatorioX  = Math.floor(Math.random()*maxX);
+          var aleatorioY  = Math.floor(Math.random()*maxY);
+
+          botaoNao.style.left = aleatorioX +'px';
+          botaoNao.style.top =aleatorioY + 'px'
+
+      }
+  </script>
+
+</body>
+</html>
